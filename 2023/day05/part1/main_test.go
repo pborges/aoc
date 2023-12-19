@@ -1,4 +1,4 @@
-package day05
+package part1
 
 import (
 	"bufio"
@@ -129,12 +129,14 @@ func Test_Lookup(t *testing.T) {
 	}
 }
 
-func Test_part1(t *testing.T) {
-	fmt.Println("Sample: ", LoadAlmanac(sample).LowestLocation())
-	fmt.Println("Real  : ", LoadAlmanac(input).LowestLocation())
+func Test_sample(t *testing.T) {
+	almanac := LoadAlmanac(sample)
+	//almanac.Log = os.Stdout
+	fmt.Println("Result: ", almanac.LowestLocation())
 }
 
-func Test_part2(t *testing.T) {
-	fmt.Println("Sample: ", LoadAlmanac(sample).LowestLocation())
-	fmt.Println("Real  : ", LoadAlmanac(input).LowestLocation())
+func Test_input(t *testing.T) {
+	almanac := LoadAlmanac(input)
+	//almanac.Log = os.Stdout
+	fmt.Println("Result  : ", almanac.LowestLocation())
 }
